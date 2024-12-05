@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoKitty Playground</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🐱 CryptoKitty Playground 🐾</h1>
+      <p>✨ Encrypt, Decode, and Play with Text! ✨</p>
+    </header>
+    <main>
+      <textarea id="input-text" placeholder="Type your text here..."></textarea>
+
+      <div class="select-cipher">
+        <label for="cipher">Choose a Cipher:</label>
+        <select id="cipher">
+          <option value="base64">Base64</option>
+          <option value="caesar">Caesar Cipher (Shift 3)</option>
+          <option value="rot13">ROT13</option>
+        </select>
+      </div>
+
+      <div class="buttons">
+        <button onclick="encrypt()">🔒 Encrypt</button>
+        <button onclick="decrypt()">🔓 Decrypt</button>
+        <button onclick="clearText()">❌ Clear</button>
+      </div>
+
+      <textarea id="output-text" placeholder="Output will appear here..." readonly></textarea>
+    </main>
+    <footer>
+      <p>Made with 🐾 and ❤️ by Cyry Kitty</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+  <div id="falling-hearts"></div>
+</body>
+</html>

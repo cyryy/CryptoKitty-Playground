@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    cursor: url('cute.png'), auto;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(135deg, #ffb3c6, #ffc7e8);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#falling-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 10px; 
+    height: 10px;
+    background: #ff4d4d; 
+    border-radius: 50%; 
+    animation: fall 5s linear infinite;
+  }
+  
+  .heart:before, .heart:after {
+    content: "";
+    position: absolute;
+    width: 10px; 
+    height: 10px;
+    background: #ff4d4d;
+    border-radius: 50%;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) scale(0.8); 
+      opacity: 0.8;
+    }
+  }
+  
+
+  
+  .container {
+    background: #fff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    border: 4px solid #ffc7e8;
+    z-index: 10;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+    color: #ff69b4;
+  }
+  
+  header p {
+    font-size: 1em;
+    color: #777;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin: 15px 0;
+    border: 2px solid #ffb3c6;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+    background: #ffe6f2;
+  }
+  
+  textarea:focus {
+    border-color: #ff69b4;
+    outline: none;
+  }
+  
+  .select-cipher {
+    margin: 15px 0;
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  select {
+    padding: 8px 15px;
+    font-size: 1em;
+    border: 2px solid #ffb3c6;
+    border-radius: 8px;
+    background: #ffe6f2;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  button {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background: #ff85c9;
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+  }
+  
